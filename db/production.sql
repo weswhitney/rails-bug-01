@@ -1,7 +1,3 @@
---
--- PostgreSQL database dump
---
-
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET client_encoding = 'UTF8';
@@ -11,10 +7,6 @@ SET client_min_messages = warning;
 
 SET search_path = public, pg_catalog;
 
---
--- Data for Name: quotes; Type: TABLE DATA; Schema: public; Owner: galvanize
---
-
 COPY quotes (id, text, author, created_at, updated_at) FROM stdin;
 1	People who think they know everything are a great annoyance to those of us who do.	Isaac Asimov	\N	\N
 2	As a child my family's menu consisted of two choices: take it or leave it.	Buddy Hackett	\N	\N
@@ -22,43 +14,13 @@ COPY quotes (id, text, author, created_at, updated_at) FROM stdin;
 4	If the facts don't fit the theory, change the facts.	Albert Einstein	2014-07-12 03:40:54.4157	2014-07-12 03:40:54.4157
 \.
 
-
---
--- Name: quotes_id_seq; Type: SEQUENCE SET; Schema: public; Owner: galvanize
---
-
 SELECT pg_catalog.setval('quotes_id_seq', 4, true);
 
-
---
--- Data for Name: schema_migrations; Type: TABLE DATA; Schema: public; Owner: galvanize
---
-
-COPY schema_migrations (version) FROM stdin;
-20140701062112
-20140712033426
-20140712034016
-\.
-
-
---
--- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: galvanize
---
 
 COPY users (id, name, email, password_digest) FROM stdin;
 1	Some User	user@example.com	$2a$10$V42d9wmy7CQReGt1B6CUoe8ZDvu0VV6dNqFM2iHFTmPr578wvE8Lm
 2	Other User	other@example.com	$2a$10$3tdLG44KNQD/9D8OcvnD7.A.9MaR10gBdzewrj9Wk00Iqm4sTf6em
 \.
 
-
---
--- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: galvanize
---
-
 SELECT pg_catalog.setval('users_id_seq', 2, true);
-
-
---
--- PostgreSQL database dump complete
---
 

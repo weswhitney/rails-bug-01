@@ -1,28 +1,31 @@
-# USING THIS TEMPLATE
-
-* `cp -r rails-practice-template my-new-thing`
-* `rm -rf .git .idea`
-* add a new database name to config/database.yml
-* change the `replace_me_controller` with something real
-* put images in the project directory and link them under `wireframes`
-
 # Rails Practice
 
 ## Setup
 
 * `bundle`
-* `rake db:create db:migrate db:seed`
+* `rake db:create db:migrate`
+* `psql -d g2-rails-bug-01-development -f db/production.sql`
 * `rails s`
 
 You can run specs with:
 
 * `rspec`
 
-Note: email/password combinations for existing users populated by `rake db:seed` can be found in the db/seeds.rb file.
-
 ## Stories
 
+One of your clients tells you that their site it totally broken.  
+You download the app and run it locally and it seems fine, so you decide to pull in production data (see above).
 
-## Wireframes
+Your job is to find and fix the bug.
 
-TODO: add pictures here
+What happens now:
+
+* You login
+* It blows up
+
+What should happen:
+
+* You login
+* You see this page:
+
+<img src="project/success.png" />
