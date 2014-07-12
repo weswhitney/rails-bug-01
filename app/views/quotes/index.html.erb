@@ -1,0 +1,15 @@
+<h1>Pithy quotes</h1>
+
+<% @quotes.each do |quote| %>
+  <section class="quote-container">
+    <blockquote class="quote">
+      <%= quote.text %>
+      <footer class="author">
+        <%= quote.author %>
+      </footer>
+    </blockquote>
+    <div class="created">
+      <%= time_ago_in_words(quote.created_at) %> ago
+    </div>
+  </section>
+<% end %>
